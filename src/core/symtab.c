@@ -55,7 +55,7 @@ void symtab_define(SymbolTable* table, const char* name, PrismType type, bool ex
     entry->type = type;
     entry->exposed = exposed;
     entry->internal = internal;
-    entry->value = value;
+    entry->data = value;
     entry->next = table->current->entries;
     table->current->entries = entry;
 }

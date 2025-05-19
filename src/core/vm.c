@@ -1,4 +1,6 @@
 #include "../../include/core/vm.h"
+#include "../../include/core/lexer.h"
+#include "../../include/core/parser.h"
 #include "../../include/common/memory.h"
 #include "../../include/common/error.h"
 #include <stdio.h>

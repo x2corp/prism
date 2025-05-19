@@ -26,11 +26,11 @@ static IoFunction io_functions[] = {
 
 void prism_io_init() {
     // TODO: io init
-}
+};
 
 void prism_io_cleanup() {
-    TODO: io cleanup
-}
+    // TODO: io cleanup
+};
 
 PrismValue prism_io_read_file(PrismValue* args, int arg_count) {
     if (arg_count < 1 || args[0].type != TYPE_STRING) {

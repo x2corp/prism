@@ -34,4 +34,7 @@ typedef struct {
     PrismValue value;
 } PrismVariable;
 
+const char* prism_type_to_string(PrismType type);
+PrismValue prism_value_convert(PrismValue value, PrismType target_type);
+
 #endif /* PRISM_TYPES_H */

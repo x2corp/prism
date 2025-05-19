@@ -45,14 +45,14 @@ static bool match(Parser* parser, TokenType type) {
     return false;
 }
 
-static void consume(Parser* parser, TokenType type, const char* message) {
+static Token* consume(Parser* parser, TokenType type, const char* message) {
     if (check(parser, type)) {
-        advance(parser);
-        return;
+        return advance(parser);
     }
     
     Token* token = peek(parser);
     prism_error_at(token->lexeme, token->line, token->column, "%s", message);
+    return token;
 }
 
 static PrismType parse_type(Parser* parser) {
